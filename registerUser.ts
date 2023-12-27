@@ -12,17 +12,17 @@ else print "User Registration Failed!"
 */
 
 const registerUser = (name: string, birthYear: number) => {
-    const currentYear: number = new Date().getFullYear();
-    const age = currentYear - birthYear 
-    if(checkAge(age)) {
-        console.log("User Registration Success");
-    } else {
-        console.log("User Registration Failed");
-    }
+  if (checkAge(birthYear)) {
+    console.log('User Registration Success');
+  } else {
+    console.log('User Registration Failed');
+  }
+};
+
+function checkAge(birthYear: number): boolean {
+  const currentYear: number = new Date().getFullYear();
+  const age = currentYear - birthYear;
+  return age >= 18;
 }
 
-function checkAge(age: number): boolean {
-    return age >= 18;
-}
-
-registerUser("Ashik",2003);
+registerUser('Ashik', 2003);
