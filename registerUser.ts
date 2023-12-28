@@ -11,13 +11,13 @@ If checkAge returns true, then print "User Registration Success!"
 else print "User Registration Failed!"
 */
 
-const registerUser = (name: string, birthYear: number) => {
+function registerUser(name: string, birthYear: number) {
   if (checkAge(birthYear)) {
     console.log('User Registration Success');
   } else {
     console.log('User Registration Failed');
   }
-};
+}
 
 function checkAge(birthYear: number): boolean {
   const currentYear: number = new Date().getFullYear();
